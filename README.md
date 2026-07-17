@@ -12,11 +12,13 @@ A stunning one-page portfolio website built with Next.js, TypeScript, Tailwind C
 ## 📦 Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -41,9 +43,30 @@ npm run build
 npm start
 ```
 
-## 📝 Customization
+## � Vercel Analytics
+
+This portfolio is ready to track page views and visitor analytics on Vercel.
+
+1. Install the analytics package:
+
+```bash
+npm i @vercel/analytics
+```
+
+2. Deploy the project to Vercel.
+
+3. Once the site is live, visit it and Vercel Analytics will begin collecting page views automatically.
+
+## 🚀 Deploy to Vercel
+
+- Connect your GitHub repository in the Vercel dashboard.
+- Import the project and deploy.
+- Vercel will build and host the portfolio automatically.
+
+## �📝 Customization
 
 Edit the content in `app/page.tsx` to personalize:
+
 - Your name and title
 - Social media links
 - Portfolio projects
