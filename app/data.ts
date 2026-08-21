@@ -19,7 +19,7 @@ export const personalInfo = {
     "Currently, I continue to learn and develop myself in the field of web development and the digital world more broadly.",
   ],
   quote: "Utilizing AI as a professional tool, not a replacement.",
-  cv: "/My_CV.pdf", // Add your CV file to public folder
+  cv: "/Chea-Panhchakselavuth-CV.pdf", // Add your CV file to public folder
 };
 
 export const socialLinks = {
