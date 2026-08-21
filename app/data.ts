@@ -39,38 +39,38 @@ export const socialHandles = {
 
 export const projects = [
   {
-    title: "Task Manager Dashboard",
-    category: "Productivity App",
+    title: "E-Commerce Demo Project",
+    category: "E-Commerce Website",
     description:
-      "A comprehensive task management system with dashboard overview, calendar scheduling, and detailed task tracking features...",
+      "A comprehensive gaming marketplace platform for buying and selling game accounts...",
     fullDescription:
-      "A modern task management application designed to help users organize, track, and complete their tasks efficiently. Features include an intuitive dashboard with progress statistics, calendar view for scheduling, detailed task cards with checklists, priority levels, and team collaboration tools.",
-    technologies: "React, TypeScript, Tailwind CSS, Framer Motion, Chart.js",
-    image: "/img/task-manager-1.png",
+      "A comprehensive gaming marketplace platform for buying and selling game accounts, featuring user and seller management, secure escrow payments, seller verification, account listings, automated order processing, and a dedicated admin dashboard for marketplace management.",
+    technologies: "React, TypeScript, Tailwind CSS, Framer Motion, Laravel (Blade), Python (payment-service)",
+    image: "/img/anx-market-1.png",
     images: [
-      "/img/task-manager-1.png", // Dashboard Overview
-      "/img/task-manager-2.png", // Task Details
-      "/img/task-manager-3.png", // Calendar View
+      "/img/anx-market-1.png",
+      "/img/anx-market-2.png",
+      "/img/anx-market-3.png",
     ],
     details: [
       {
-        title: "Dashboard Overview",
+        title: "Marketplace Home Page",
         content:
-          "Get a quick summary of your tasks and overall progress with beautiful statistics cards showing total tasks (128), completed tasks (76), pending tasks (52), and overall progress (59%). The dashboard provides an at-a-glance view of your productivity with visual progress bars and real-time updates.",
+          "A modern gaming marketplace homepage where users can browse available game accounts, explore different categories, search for products, and quickly find accounts available for purchase.",
       },
       {
-        title: "Task Details & Management",
+        title: "Browse Our Product",
         content:
-          "All the important info about a task in one place. Each task card includes a detailed description, checklist with progress tracking (2/4 completed), due dates (May 28, 2024), priority levels (High/Medium/Low), assignee information (Ava Smith), tags (UI, Dashboard, Frontend), and quick actions to edit or mark tasks as complete.",
+          "A detailed product page showing game account information, pricing, product details, seller information, and purchase options. Sensitive account details remain protected until the purchase process is completed.",
       },
       {
-        title: "Calendar / Schedule View",
+        title: "Admin Dashboard",
         content:
-          "See deadlines and plan your work efficiently with the integrated calendar view. Switch between week and month views, visualize tasks on specific dates with color-coded labels (Design Review, API Integration, Client Call, Dashboard Deadline, Testing Sprint, Project Demo), and never miss important deadlines with the intuitive scheduling interface.",
+          "A dedicated dashboard for managing marketplace activities, including products, orders, sellers, users, and account inventory. The dashboard provides organized management tools and an overview of important marketplace information.",
       },
     ],
-    link: null,
-    available: false,
+    link: "https://anx-market.vercel.app/",
+    available: true,
   },
   {
     title: "News Portal Website",
