@@ -14,10 +14,11 @@ html {
   max-width: 100vw;
 }
 
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
-  position: relative;
+@layer base {
+  body {
+    @apply bg-[#000C18] text-white relative font-sans overflow-x-hidden;
+    max-width: 100vw;
+  }
 }
 
 /* Improved touch targets for mobile */

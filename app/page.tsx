@@ -76,42 +76,18 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-dark text-white relative overflow-x-hidden">
+    <main className="min-h-screen w-full relative bg-[#000C18] text-white overflow-x-hidden">
       {/* FIXED BACKGROUND - Stays in place while scrolling */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
-        {/* Base Dark Blue Gradient - DARKER */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#050d1a] via-[#070e1a] to-[#030508]" />
-
-        {/* Small Grid Pattern - WHITE and MORE VISIBLE */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)
-            `,
-            backgroundSize: '20px 20px',
-            mixBlendMode: 'overlay',
-            opacity: 0.6
-          }}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Gradient image */}
+        <img
+          src="/gradient.png"
+          alt="Gradient-img"
+          className="absolute top-0 right-0 opacity-60 z-[-1]"
         />
 
-        {/* 3 SPECIFIC GLOWING SPOTS - Matching Original */}
-
-        {/* Glow 1: Top Left (Main Blue Glow) */}
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] -translate-x-1/4 -translate-y-1/4">
-          <div className="absolute inset-0 bg-[#1e40af] opacity-25 blur-[120px] rounded-full"></div>
-        </div>
-
-        {/* Glow 2: Middle Left (Purple Glow behind "Ready to Innovate") */}
-        <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px]">
-          <div className="absolute inset-0 bg-[#6d28d9] opacity-20 blur-[100px] rounded-full"></div>
-        </div>
-
-        {/* Glow 3: Bottom Right (Subtle Purple) */}
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] translate-x-1/4 translate-y-1/4">
-          <div className="absolute inset-0 bg-[#7c3aed] opacity-15 blur-[100px] rounded-full"></div>
-        </div>
+        {/* Blur Effect */}
+        <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#8b5cf6] -rotate-[30deg] z-[-10]"></div>
       </div>
 
       {/* Mobile Navigation */}
@@ -123,16 +99,16 @@ export default function Home() {
 
       {/* Desktop Navigation */}
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 0.3 }}
         className="hidden md:block fixed top-0 left-0 right-0 z-50"
       >
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
             className="text-2xl font-bold text-gradient"
           >
             {footer.brandName}
@@ -141,9 +117,9 @@ export default function Home() {
             {['Home', 'About', 'Portfolio', 'Contact'].map((item, index) => (
               <motion.button
                 key={item}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 * index }}
                 onClick={() => scrollToSection(item.toLowerCase())}
                 className={`relative text-sm font-medium transition-colors hover:text-primary ${activeSection === item.toLowerCase() ? 'text-white' : 'text-white/70'
                   }`}
@@ -163,15 +139,15 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden z-10 px-4 md:px-6 pt-20 md:pt-0">
+      <section id="home" className="min-h-[85vh] relative flex items-center justify-center overflow-hidden z-10 px-4 md:px-6 pt-32 pb-10 md:pt-24 md:pb-0">
         <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* Left Content - Text */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
               className="inline-block px-6 py-3 bg-black/40 backdrop-blur-xl border border-purple-500/30 rounded-full text-sm mb-6"
               style={{
@@ -189,9 +165,9 @@ export default function Home() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
               className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 mobile-heading-lg"
             >
@@ -215,9 +191,9 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
               className="text-xl text-white/70 mb-4 font-light h-8"
             >
@@ -233,9 +209,9 @@ export default function Home() {
             </motion.p>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
               className="text-white/80 mb-8 max-w-lg"
             >
@@ -244,9 +220,9 @@ export default function Home() {
 
             {/* Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.7 }}
               viewport={{ once: true }}
               className="flex gap-4 mb-8"
             >
@@ -262,9 +238,9 @@ export default function Home() {
 
             {/* Social Links */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
               className="hidden md:flex gap-4"
             >
@@ -312,9 +288,9 @@ export default function Home() {
       <section id="about" className="min-h-[90vh] flex items-center justify-center py-4 relative z-10">
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.6 }}
             viewport={{ once: false, amount: 0.1 }}
             className="text-center mb-6"
           >
@@ -326,9 +302,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.6 }}
               viewport={{ once: false, amount: 0.1 }}
               className="relative"
             >
@@ -342,9 +318,9 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.6 }}
               viewport={{ once: false, amount: 0.1 }}
             >
               <h3 className="text-3xl font-bold mb-6">Hello, I'm {personalInfo.name}</h3>
@@ -379,9 +355,9 @@ export default function Home() {
       < section id="portfolio" className="min-h-[90vh] flex items-center justify-center py-20 relative z-10" >
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.4 }}
             viewport={{ once: false, amount: 0.2 }}
             className="text-center mb-10"
           >
@@ -440,17 +416,17 @@ export default function Home() {
           {/* Projects Content - 3 Column Card Grid */}
           {portfolioFilter === 'Proyek' && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.3 }}
               viewport={{ once: false, amount: 0.1 }}
               className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto"
             >
               {projects.map((project, index) => (
                 <motion.div
                   key={project.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: false, amount: 0.2 }}
                   className="group bg-white/[0.03] rounded-2xl border border-white/50 overflow-hidden hover:border-primary/40 transition-all duration-300 flex flex-col"
@@ -517,17 +493,17 @@ export default function Home() {
           {/* Education Content - 2 Column Grid */}
           {portfolioFilter === 'Edukasi' && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.3 }}
               viewport={{ once: false, amount: 0.1 }}
               className="grid md:grid-cols-2 gap-5 max-w-6xl mx-auto"
             >
               {education.map((edu, index) => (
                 <motion.div
                   key={edu.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: false, amount: 0.2 }}
                   className="bg-white/[0.03] backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:border-primary/40 transition-all duration-300"
@@ -550,9 +526,9 @@ export default function Home() {
           {/* Tech Stack Content - 4 Column Grid */}
           {portfolioFilter === 'Tech Stack' && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.3 }}
               viewport={{ once: false, amount: 0.1 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto"
             >
@@ -571,8 +547,8 @@ export default function Home() {
                 return (
                   <motion.div
                     key={tech.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ delay: index * 0.05 }}
                     viewport={{ once: false, amount: 0.2 }}
                     className="group bg-white/[0.03] backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:border-primary/40 transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -593,9 +569,9 @@ export default function Home() {
       <section id="contact" className="min-h-screen flex items-center justify-center py-4 relative z-10">
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.6 }}
             viewport={{ once: false, amount: 0.1 }}
             className="text-center mb-6"
           >
@@ -610,9 +586,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Leave a Comment Form */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.6 }}
               viewport={{ once: false, amount: 0.1 }}
               className="bg-white/5 rounded-2xl border border-white/50 p-8"
             >
@@ -685,9 +661,9 @@ export default function Home() {
 
             {/* Connect Section */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.6 }}
               viewport={{ once: false, amount: 0.1 }}
               className="space-y-8"
             >
@@ -786,8 +762,8 @@ export default function Home() {
             >
               {/* Modal */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                 onClick={(e) => e.stopPropagation()}
