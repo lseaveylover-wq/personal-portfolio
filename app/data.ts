@@ -13,7 +13,7 @@ export const personalInfo = {
     "Software Engineering",
     "Web Developer",
   ],
-  profileImage: "/img/pfp.JPG",
+  profileImage: "/img/pfp.jpg",
   bio: [
     "An Information Systems student with a great interest in the world of website development, digital technology, and technological innovation. I enjoy exploring how technology can be applied to solve real problems and create beneficial solutions.",
     "Currently, I continue to learn and develop myself in the field of web development and the digital world more broadly. (The One Who wear Glasses)",
