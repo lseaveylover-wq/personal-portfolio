@@ -82,9 +82,9 @@ export const projects = [
     technologies: "React, Vite, Typescript, Tailwind CSS, GSAP, Three.js,",
     image: "/img/3d-web-1.png",
     images: [
-      "/img/3d-web-1.png", // Hero Section
-      "/img/3d-web-2.png", // Bento Box
-      "/img/3d-web-3.png", // Parallax Animation
+      "/img/3d-web-1.png",
+      "/img/3d-web-2.png",
+      "/img/3d-web-3.png", 
     ],
     details: [
       {
@@ -107,38 +107,38 @@ export const projects = [
     available: true,
   },
   {
-    title: "E-commerce Dashboard",
-    category: "Business Analytics & Management",
+    title: "E-commerce Platform",
+    category: "E-Commerce Website",
     description:
-      "A comprehensive e-commerce management system with analytics dashboard, order management, and secure payment checkout...",
+      "A fully responsive modern e-commerce storefront featuring an engaging home page, detailed product views, and a seamless user experience...",
     fullDescription:
-      "A complete e-commerce admin platform featuring powerful analytics dashboard with sales tracking and insights, order management system for tracking customer orders with multiple status filters, and seamless payment checkout page with multiple payment options including cash on delivery, credit/debit cards, UPI, and wallet payments.",
-    technologies: "React, TypeScript, Chart.js, Stripe API, Tailwind CSS",
-    image: "🛒",
+      "A complete e-commerce platform designed with user experience in mind. It features a welcoming home page to highlight top products, a comprehensive product details page with interactive elements, and a fully responsive design that adapts flawlessly across all mobile, tablet, and desktop devices.",
+    technologies: "React, TypeScript, Stripe API, Tailwind CSS",
+    image: "/img/ecommerce-1.png",
     images: [
-      "/img/ecommerce-1.png", // Analytics Dashboard (Main)
-      "/img/ecommerce-2.png", // Order Management
-      "/img/ecommerce-3.png", // Payment & Checkout
+      "/img/ecommerce-1.png",
+      "/img/ecommerce-2.png",
+      "/img/ecommerce-3.png", 
     ],
     details: [
       {
-        title: "Analytics Dashboard",
+        title: "Home Page",
         content:
-          "Track sales performance, top products, and key insights with comprehensive statistics cards showing Total Sales ($24,560 ↑18.6%), Total Orders (562 ↑12.4%), Visitors (12,845 ↑9.7%), and Conversion Rate (3.45% ↑5.1%). Features include Sales Overview chart comparing this month vs last month, Orders by Day bar chart showing daily order patterns, and Top Selling Products list (Wireless Headphones 421, Sneakers 315, Graphic T-Shirt 289, Classic Watch 198, Backpack 156).",
+          "A modern, welcoming storefront featuring highlighted products, category banners, and promotional sections. Designed to engage customers immediately with a clean layout, intuitive navigation, and quick access to the latest collections and deals.",
       },
       {
-        title: "Order Management",
+        title: "Product Details",
         content:
-          "Admin view to manage and track customer orders with a comprehensive order table displaying Order ID, Customer name, Date, Payment status (Paid/COD), Shipping status (Delivered/Shipped/Processing/Pending), and Total amount. Features filter tabs for All Orders, Pending, Processing, Shipped, Delivered, and Cancelled. Recent orders include #ORD1005 (Ananya Sharma, $89.98, Delivered), #ORD1004 (Rohit Verma, $129.99, Shipped), #ORD1003 (Meera Patel, $49.99, Processing), and more with a 'View All Orders' button for complete order history.",
+          "Detailed product view showcasing high-quality images, comprehensive descriptions, pricing, and customer reviews. Includes dynamic elements like size/color selection, quantity adjustment, and seamless 'Add to Cart' functionality to streamline the buying experience.",
       },
       {
-        title: "Payment & Checkout",
+        title: "Responsive Design",
         content:
-          "Enter details, choose payment method, and place your order with a user-friendly checkout interface. Left section features Shipping Address form (Full Name: Ananya Sharma, Address: 221B Baker Street, City: Mumbai, PIN Code: 400001, Phone: 98765 43210), Order Summary (Subtotal: $129.98, Shipping: $5.00, Total: $134.98). Right section offers Payment Method options including Cash on Delivery , Credit/Debit Card  (selected), UPI, and Wallet , with a prominent green 'Confirm Order' button to complete the purchase.",
+          "Fully optimized for all devices, ensuring a seamless shopping experience whether on desktop, tablet, or mobile. The fluid layout adapts automatically, with mobile-friendly navigation menus, touch-optimized carousels, and easily accessible interfaces.",
       },
     ],
-    link: null,
-    available: false,
+    link: 'https://ecommerce-react-beta-inky.vercel.app/  ',
+    available: true,
   },
 ];
 
