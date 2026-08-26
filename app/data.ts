@@ -73,38 +73,38 @@ export const projects = [
     available: true,
   },
   {
-    title: "News Portal Website",
-    category: "Content Management System",
+    title: "3d Landing website product (MacBook Pro)",
+    category: "3d Landing Page",
     description:
-      "A modern news portal with homepage hero section, article pages with rich content, and comprehensive admin panel for content management...",
+      "A highly interactive 3D landing page for a MacBook Pro, featuring scroll-triggered animations, volumetric lighting effects, and a modern bento box grid layout.",
     fullDescription:
-      "A fully-featured news portal website with responsive design, featuring a dynamic homepage with breaking news, top stories sidebar, trending articles section, detailed article pages with author information and social sharing, and a powerful admin content management system for creating, editing, and publishing articles with categories, tags, and scheduling capabilities.",
-    technologies: "React, Next.js, TypeScript, Tailwind CSS, CMS Integration",
-    image: "�",
+      "This project showcases advanced frontend development techniques by recreating a premium product landing page. It features a stunning hero section with glowing text and volumetric lighting, a complex asymmetrical bento box layout built with CSS Grid, and highly interactive scroll-triggered 3D parallax animations. The project leverages modern tools like GSAP, Lenis for smooth scrolling, and advanced CSS techniques to deliver an immersive user experience.",
+    technologies: "React, Vite, Typescript, Tailwind CSS, GSAP, Three.js,",
+    image: "/img/3d-web-1.png",
     images: [
-      "/img/news-portal-1.png", // Homepage / Hero Section
-      "/img/news-portal-2.png", // Article Page
-      "/img/news-portal-3.png", // Admin Content Management
+      "/img/3d-web-1.png", // Hero Section
+      "/img/3d-web-2.png", // Bento Box
+      "/img/3d-web-3.png", // Parallax Animation
     ],
     details: [
       {
-        title: "Homepage / Hero Section",
+        title: "Hero Section (Glowing Text & Laptop)",
         content:
-          "Dynamic homepage featuring a prominent hero banner with breaking news (Global Leaders Meet to Discuss Climate Action Plan), top stories sidebar with thumbnails, and a trending now section showcasing the latest articles with beautiful imagery. The navigation includes categories like World, Business, Sports, Technology, and Community for easy content discovery.",
+          "This section utilizes a centered layout within a full-height viewport. The multi-colored text is achieved using a CSS linear-gradient background clipped to the text. The intense volumetric glow is created using absolutely positioned pseudo-elements with radial gradients and heavy CSS blur filters to create a dispersed lighting effect.",
       },
       {
-        title: "Article Page",
+        title: "Bento Box Grid Layout",
         content:
-          "Engaging article layout with compelling headlines (AI Revolutionizing the Future of Work), author information (By Sarah Johnson, May 10, 2024, 6 min read), featured images of the content, rich text formatting, inspiring quotes ('The best way to predict the future is to invent it.' - Alan Kay), and social sharing options including Facebook, Twitter, LinkedIn, WhatsApp, and bookmark functionality.",
+          "Built using a robust CSS Grid architecture for an asymmetrical layout. Cards use varying grid column and row spans. They feature consistent border-radius, hidden overflow, and subtle inner borders. The top-right card's glowing animated border is likely a rotating conic-gradient pseudo-element spinning behind the dark card content.",
       },
       {
-        title: "Admin Content Management",
+        title: "Scroll-Triggered Parallax Windows",
         content:
-          "Comprehensive admin dashboard with full content management capabilities. Features include article creation and editing with title, slug, category selection, tags, rich text editor with formatting tools (bold, italic, underline, lists, quotes, code, links), publish controls (Save Draft, Preview, Publish Now, Schedule), status management, and organized sidebar navigation for Dashboard, Articles, Media, Comments, Users, and Settings.",
+          "This section relies on scroll animation libraries like GSAP paired with sticky positioning. Inside a pinned container, the UI windows are absolutely positioned. As the user scrolls, Javascript calculates progress and applies varying 3D transforms (translate3d, scale) to each window, moving them outward from the center at different speeds to create parallax depth.",
       },
     ],
-    link: null,
-    available: false,
+    link: "https://macbookprogsaplanding.vercel.app/",
+    available: true,
   },
   {
     title: "E-commerce Dashboard",
@@ -147,7 +147,7 @@ export const education = [
     title: " Bachelor Degree",
     subtitle:
       "Bachelor Degree of Software Engineering, at BELTEI International University ",
-    period: "2022 - Present",
+    period: "2024 - Present",
   },
   {
     title: "High School Diploma",
